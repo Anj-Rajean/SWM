@@ -1,0 +1,45 @@
+{
+  "app": {
+    "name": "PasswordVault Web",
+    "version": "1.0.0",
+    "type": "web",
+    "platform": "linux_server"
+  },
+  "frontend": {
+    "framework": "vanilla",
+    "pages": [
+      "login",
+      "dashboard",
+      "vault"
+    ],
+    "ui_theme": "dark"
+  },
+  "backend": {
+    "language": "nodejs",
+    "framework": "express",
+    "port": 3000,
+    "auth": "master_password",
+    "session_timeout_seconds": 900
+  },
+  "security": {
+    "encryption_tool": "openssl",
+    "algorithm": "aes-256-cbc",
+    "vault_file": "vault.enc",
+    "temp_file": "vault.json",
+    "use_https": true,
+    "password_hashing": "sha256"
+  },
+  "storage": {
+    "type": "file",
+    "format": "json",
+    "encrypted": true
+  },
+  "features": {
+    "add_password": true,
+    "edit_password": true,
+    "delete_password": true,
+    "search": true,
+    "multi_user": false,
+    "clipboard_copy": true
+  }
+}

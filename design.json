@@ -1,0 +1,80 @@
+{
+  "project_name": "ErgoSecure - Gestionnaire de Mots de Passe",
+  "design_principles": {
+    "framework": "Bastien et Scapin (Ergonomie des interfaces)",
+    "key_criterias": [
+      "Guidage (Incitation, Groupement/Distinction)",
+      "Charge de travail (Brièveté, Densité informationnelle)",
+      "Contrôle explicite",
+      "Adaptabilité",
+      "Gestion des erreurs",
+      "Homogénéité/Cohérence",
+      "Signification des codes",
+      "Compatibilité"
+    ]
+  },
+  "visual_identity": {
+    "typography": {
+      "primary_font": "Roboto Slab",
+      "fallback": "serif"
+    },
+    "colors": {
+      "primary": "#5478FF",
+      "palette": [
+        "#FFC570",
+        "#EFD2B0",
+        "#547792",
+        "#1A3263"
+      ]
+    },
+    "assets": {
+      "icons": "Lucide React Icons"
+    }
+  },
+  "screens": [
+    {
+      "id": "login_screen",
+      "title": "Connexion",
+      "description": "Interface sécurisée avec champs de saisie clairs et incitation visuelle au guidage.",
+      "components": ["Formulaire de connexion", "Lien création de compte", "Icônes"]
+    },
+    {
+      "id": "signup_screen",
+      "title": "Création de compte",
+      "description": "Processus d'inscription optimisé pour réduire la charge de travail cognitive.",
+      "components": ["Formulaire d'inscription", "Validation de mot de passe en temps réel", "Indicateurs de sécurité"]
+    },
+    {
+      "id": "dashboard",
+      "title": "Coffre-fort (Tableau de bord)",
+      "description": "Vue d'ensemble des mots de passe gérés, utilisant un groupement logique.",
+      "components": ["Liste des entrées", "Barre de recherche", "Bouton d'action rapide (Ajout)", "Toast notifications"]
+    },
+    {
+      "id": "add_password",
+      "title": "Ajouter un mot de passe",
+      "description": "Formulaire d'ajout avec aide contextuelle et gestion proactive des erreurs.",
+      "components": ["Générateur de mot de passe", "Champs de métadonnées", "Bouton de sauvegarde", "Afficher/Masquer mot de passe"]
+    }
+  ],
+  "technical_stack": {
+    "backend": "FastAPI (Python)",
+    "security": "AES-256-CBC encryption",
+    "database": "SQLite",
+    "frontend": "React + Vite",
+    "styling": "CSS3 (Flexbox/Grid)"
+  },
+  "features": {
+    "authentication": ["Register", "Login", "Logout", "Session management"],
+    "vault": ["Add password", "Edit password", "Delete password", "Search", "Copy to clipboard"],
+    "password_generator": ["Random password generation", "Custom length"],
+    "notifications": ["Toast messages for all actions"]
+  },
+  "user_criterias": {
+    "guidance": "Visual buttons, clear labels, grouped actions",
+    "workload": "Short forms, minimal required fields",
+    "control": "Immediate feedback, toast notifications",
+    "errors": "Clear error messages, form validation",
+    "consistency": "Same colors, fonts, and layout across all screens"
+  }
+}

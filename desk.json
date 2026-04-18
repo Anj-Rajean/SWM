@@ -1,0 +1,38 @@
+{
+  "app": {
+    "name": "PasswordVault",
+    "version": "1.0.0",
+    "platform": "linux",
+    "type": "desktop"
+  },
+  "runtime": {
+    "language": "python",
+    "gui_framework": "tkinter",
+    "editor": "vscode"
+  },
+  "security": {
+    "encryption_tool": "openssl",
+    "algorithm": "aes-256-cbc",
+    "vault_file": "vault.enc",
+    "key_file": "secret.key",
+    "require_master_password": true,
+    "auto_lock_seconds": 60
+  },
+  "storage": {
+    "format": "json",
+    "temporary_file": "vault.json",
+    "encrypted_file": "vault.enc"
+  },
+  "features": {
+    "add_password": true,
+    "edit_password": true,
+    "delete_password": true,
+    "search": true,
+    "copy_to_clipboard": true
+  },
+  "ui": {
+    "theme": "dark",
+    "show_password": false,
+    "language": "fr"
+  }
+}

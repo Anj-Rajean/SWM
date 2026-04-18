@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #81A6C6;
+  --primary-hover: #6B93B3;
+  --secondary: #AACDDC;
+  --tertiary: #F3E3D0;
+  --accent: #D2C4B4;
+  --dark: #1A3263;
+  --light: #F3E3D0;
+  --error: #ff6b6b;
+  --success: #4caf50;
+  --background: #D2C4B4;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+  background: var(--background);
+  color: var(--dark);
+}
+
+.dashboard {
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.dashboard-header {
+  background: var(--secondary);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--primary);
+}
+
+.dashboard-header h1 {
+  color: var(--dark);
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.logout-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--dark);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+.logout-btn:hover {
+  background: var(--primary);
+  color: var(--light);
+}
+
+.vault-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vault-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--accent);
+  background: var(--light);
+  color: var(--dark);
+  font-size: 0.95rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.add-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: var(--light);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+.add-btn:hover {
+  background: var(--primary-hover);
+}
+
+.password-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.password-card {
+  background: var(--secondary);
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.password-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--dark);
+  font-size: 1rem;
+}
+
+.password-card p {
+  margin: 0.25rem 0;
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+.password-card .actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.password-card .actions button {
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--primary);
+  background: transparent;
+  color: var(--dark);
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.password-card .actions button:hover {
+  background: var(--primary);
+  color: var(--light);
+}
+
+.empty-vault {
+  text-align: center;
+  color: var(--accent);
+  padding: 3rem;
+  grid-column: 1 / -1;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: var(--secondary);
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  border: 2px solid var(--primary);
+}
+
+.modal h2 {
+  margin-top: 0;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.modal input, .modal textarea {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 2px solid var(--accent);
+  background: var(--light);
+  color: var(--dark);
+  font-size: 0.95rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+.modal input:focus, .modal textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.modal input::placeholder, .modal textarea::placeholder {
+  color: var(--accent);
+}
+
+.password-input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.password-input-group input {
+  flex: 1;
+}
+
+.password-input-group button {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 2px solid var(--primary);
+  background: var(--light);
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  margin-top: 0.75rem;
+}
+
+.modal-buttons button {
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Roboto Slab', serif;
+}
+
+.modal-buttons .save-btn {
+  background: var(--primary);
+  color: var(--light);
+}
+
+.modal-buttons .cancel-btn {
+  background: var(--accent);
+  color: var(--dark);
+}
